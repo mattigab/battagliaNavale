@@ -10,7 +10,7 @@ function load()
 		for (var c = 0; c<15; c++)
 		{
 			tabHTML=tabHTML+"<td id="+ids[r] + ids[c]+" onclick='shoot("+ids[r]+","+ids[c]+")';>";
-			tabHTML=tabHTML+ "<img src=./img/water.png>";
+			tabHTML=tabHTML+ "<img src=./img/grigio.png>";
 
 			//"(" +ids[r]+","+ids[c] + ") ";
 			tabHTML=tabHTML+"</td>";
