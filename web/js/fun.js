@@ -25,6 +25,19 @@ function load()
 
 function shoot(r,c)
 {
+	var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 	var myCell = document.getElementById(r.toString()+c.toString());
-	myCell.innerHTML = "<img src=./img/nave.png>";
+	if(map[ids.indexOf(r.toString())][ids.indexOf(c.toString())] == "nave")
+	{
+		myCell.innerHTML = "<img src=./img/nave.png>";
+	}
+	else if(map[ids.indexOf(r.toString())][ids.indexOf(c.toString())] == "natante")
+	{
+		myCell.innerHTML = "<img src=./img/natante.png>";
+	}
+	else
+	{
+		myCell.innerHTML = "<img src=./img/water.png>";
+	}
+
 }
