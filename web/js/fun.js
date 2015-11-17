@@ -9,8 +9,10 @@ function load()
 		tabHTML=tabHTML+"<tr>";
 		for (var c = 0; c<15; c++)
 		{
-			tabHTML=tabHTML+"<td id="+ids[r] + ids[c]+">";
-			tabHTML=tabHTML+ "(" +ids[r]+","+ids[c] + ") ";
+			tabHTML=tabHTML+"<td id="+ids[r] + ids[c]+" onclick='shoot("+ids[r]+","+ids[c]+")';>";
+			tabHTML=tabHTML+ "<img src=./img/water.png>";
+
+			//"(" +ids[r]+","+ids[c] + ") ";
 			tabHTML=tabHTML+"</td>";
 
 		}
@@ -19,4 +21,10 @@ function load()
 
 	tabHTML=tabHTML+"</table>";
 	myTabDiv.innerHTML = tabHTML;
+}
+
+function shoot(r,c)
+{
+	var myCell = document.getElementById(r.toString()+c.toString());
+	myCell.innerHTML = "<img src=./img/nave.png>";
 }
