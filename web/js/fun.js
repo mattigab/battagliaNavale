@@ -4,10 +4,10 @@ function load()
 	var myTabDiv = document.getElementById("myTab");
 	var tabHTML = "<table class='myTab'>";
 	for (var r = 0; r<15;r++)
-	{
+	{	
 		tabHTML=tabHTML+"<tr>";
 		for (var c = 0; c<15; c++)
-		{
+		{	
 			tabHTML=tabHTML+"<td id="+r+c+" onclick='shoot("+r+","+c+")'>";
 			tabHTML=tabHTML+ "<img src=./img/fog.png class='img-responsive'>";
 			tabHTML=tabHTML+"</td>";
@@ -34,6 +34,10 @@ function shoot(r,c)
 	else if(map[r][c] == "natante")
 	{
 		myCell.innerHTML = "<img src=./img/natante.png class='img-responsive'>";
+	}
+	else if(map[r][c] == "isola")
+	{
+		myCell.innerHTML = "<img src=./img/island.png class='img-responsive'>";
 	}
 	else
 	{

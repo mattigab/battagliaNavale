@@ -2,7 +2,7 @@
  * Created by mattiagabbrielli on 17/11/15.
  */
 
-var type = ["nave","acqua","natante"];
+var type = ["nave","acqua","natante","isola"];
 var N = 15;
 var map =new Array(N);
 
@@ -12,7 +12,7 @@ for(var i=0; i<N; i++){
 
 for(var ii=0; ii<N; ii++){
     for (var jj=0;jj<N; jj++){
-        map[ii][jj] = type[Math.floor(Math.random()*3)];
+        map[ii][jj] = type[Math.floor(Math.random()*4)];
     }
 }
 
