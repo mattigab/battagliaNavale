@@ -11,17 +11,17 @@ function load()
 		{	
 			if(c==0)
 			{
-				tabHTML = tabHTML+"<td>"+r+"</td>";
+				tabHTML = tabHTML+"<td>"+r.toString(16);+"</td>";
 			}
 			else
 			{
 				if(r==0)
 				{
-					tabHTML = tabHTML+"<td>"+c+"</td>";
+					tabHTML = tabHTML+"<td>"+c.toString(16);+"</td>";
 				}
 				else
 				{
-					tabHTML=tabHTML+"<td id="+r+c+" onclick='shoot("+r+","+c+")'>";
+					tabHTML=tabHTML+"<td id=R"+r+"C"+c+" onclick='shoot("+r+","+c+")'>";
 					tabHTML=tabHTML+ "<img src=./img/fog.png class='img-responsive'>";
 					tabHTML=tabHTML+"</td>";
 				}
@@ -38,7 +38,7 @@ function load()
 function shoot(r,c)
 {
 	//var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
-	var myCell = document.getElementById(r.toString()+c.toString());
+	var myCell = document.getElementById("R"+r.toString()+"C"+c.toString());
 
 	var str = myCell.getElementsByTagName("img")[0].src; 
 	if (str.indexOf("nave") != -1 )
