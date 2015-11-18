@@ -1,4 +1,4 @@
-function load()
+function start()
 {
 	//var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 	var myTabDiv = document.getElementById("myTab");
@@ -33,6 +33,7 @@ function load()
 
 	tabHTML=tabHTML+"</table>";
 	myTabDiv.innerHTML = tabHTML;
+	document.getElementById("button").hidden = "true";
 }
 
 function shoot(r,c)
