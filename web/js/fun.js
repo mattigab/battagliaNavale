@@ -3,14 +3,29 @@ function load()
 	//var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 	var myTabDiv = document.getElementById("myTab");
 	var tabHTML = "<table class='myTab'>";
-	for (var r = 0; r<15;r++)
+	for (var r = 0; r<16;r++)
 	{	
+
 		tabHTML=tabHTML+"<tr>";
-		for (var c = 0; c<15; c++)
+		for (var c = 0; c<16; c++)
 		{	
-			tabHTML=tabHTML+"<td id="+r+c+" onclick='shoot("+r+","+c+")'>";
-			tabHTML=tabHTML+ "<img src=./img/fog.png class='img-responsive'>";
-			tabHTML=tabHTML+"</td>";
+			if(c==0)
+			{
+				tabHTML = tabHTML+"<td>"+r+"</td>";
+			}
+			else
+			{
+				if(r==0)
+				{
+					tabHTML = tabHTML+"<td>"+c+"</td>";
+				}
+				else
+				{
+					tabHTML=tabHTML+"<td id="+r+c+" onclick='shoot("+r+","+c+")'>";
+					tabHTML=tabHTML+ "<img src=./img/fog.png class='img-responsive'>";
+					tabHTML=tabHTML+"</td>";
+				}
+			}
 
 		}
 		tabHTML=tabHTML+"</tr>";

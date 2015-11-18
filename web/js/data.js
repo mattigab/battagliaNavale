@@ -3,14 +3,14 @@
  */
 
 var type = ["nave","acqua","natante","isola"];
-var N = 15;
+var N = 16;
 var map =new Array(N);
 
-for(var i=0; i<N; i++){
+for(var i=1; i<N; i++){
     map[i]=new Array(N);
 }
 
-for(var ii=0; ii<N; ii++){
+for(var ii=1; ii<N; ii++){
     for (var jj=0;jj<N; jj++){
         map[ii][jj] = type[Math.floor(Math.random()*4)];
     }
