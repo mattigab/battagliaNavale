@@ -28,19 +28,19 @@ function shoot(r,c)
 	var str = myCell.getElementsByTagName("img")[0].src; 
 	if (str.indexOf("nave") != -1 )
 	{
-		alert("hai cliccato su nave");
+		myCell.innerHTML = "<img src=./img/crossShip.png class='img-responsive'>";
 	}
 	else if (str.indexOf("natante") != -1 )
 	{
-		alert("hai cliccato su natante");
+		myCell.innerHTML = "<img src=./img/crossBoat.png class='img-responsive'>";
 	}
 	else if (str.indexOf("crossBoat") != -1 )
 	{
-		alert("hai cliccato su natanteX");
+		myCell.innerHTML = "<img src=./img/natante.png class='img-responsive'>";
 	}
 	else if (str.indexOf("crossShip") != -1 )
 	{
-		alert("hai cliccato su naveX");
+		myCell.innerHTML = "<img src=./img/nave.png class='img-responsive'>";
 	}
 
 	else
