@@ -2,6 +2,8 @@ function load()
 {
 	var myTabDiv = document.getElementById("myTab");
 	var tabHTML = "<table class='myTab'>";
+	var ids= ["0","a","b","c","d","e","f","g","h","i","l","m","n","o","p","q"];
+
 	for (var r = 0; r<16;r++)
 	{	
 
@@ -10,18 +12,18 @@ function load()
 		{	
 			if(c==0)
 			{
-				tabHTML = tabHTML+"<td>"+r.toString(16);+"</td>";
+				tabHTML = tabHTML+"<td>"+ids[r].toString();+"</td>";
 			}
 			else
 			{
 				if(r==0)
 				{
-					tabHTML = tabHTML+"<td>"+c.toString(16);+"</td>";
+					tabHTML = tabHTML+"<td>"+c.toString();+"</td>";
 				}
 				else
 				{
 					tabHTML=tabHTML+"<td id=R"+r+"C"+c+" onclick='fill("+r+","+c+")'>";
-					tabHTML=tabHTML+ "<img src=./img/fog.png class='img-responsive'>";
+					tabHTML=tabHTML+ "<img src=./img/water.png class='img-responsive'>";
 					tabHTML=tabHTML+"</td>";
 				}
 			}
@@ -39,7 +41,7 @@ function fill(r,c)
 	var myCell = document.getElementById("R"+r.toString()+"C"+c.toString());
 
 	var str = myCell.getElementsByTagName("img")[0].src; 
-	if (str.indexOf("fog") != -1 )
+	if (str.indexOf("water") != -1 )
 	{
 		myCell.innerHTML = "<img src=./img/nave.png class='img-responsive'>";
 		map[r][c] = "nave";
@@ -56,7 +58,7 @@ function fill(r,c)
 	}
 	else if (str.indexOf("island") != -1 )
 	{
-		myCell.innerHTML = "<img src=./img/fog.png class='img-responsive'>";
+		myCell.innerHTML = "<img src=./img/water.png class='img-responsive'>";
 		map[r][c] = "acqua";
 	}
 

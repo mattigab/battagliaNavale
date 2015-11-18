@@ -1,6 +1,6 @@
 function start()
 {
-	//var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+	var ids= ["0","a","b","c","d","e","f","g","h","i","l","m","n","o","p","q"];
 	var myTabDiv = document.getElementById("myTab");
 	var tabHTML = "<table class='myTab'>";
 	for (var r = 0; r<16;r++)
@@ -11,13 +11,13 @@ function start()
 		{	
 			if(c==0)
 			{
-				tabHTML = tabHTML+"<td>"+r.toString(16);+"</td>";
+				tabHTML = tabHTML+"<td>"+ids[r].toString();+"</td>";
 			}
 			else
 			{
 				if(r==0)
 				{
-					tabHTML = tabHTML+"<td>"+c.toString(16);+"</td>";
+					tabHTML = tabHTML+"<td>"+c.toString();+"</td>";
 				}
 				else
 				{
@@ -62,7 +62,7 @@ function shoot(r,c)
 	{
 		myCell.innerHTML = "<img src=./img/island.png class='img-responsive'>";
 	}
-	else if (str.indexOf("Island") != -1 )
+	else if (str.indexOf("island") != -1 )
 	{
 		myCell.innerHTML = "<img src=./img/crossIsola.png class='img-responsive'>";
 	}
