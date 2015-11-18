@@ -58,6 +58,14 @@ function shoot(r,c)
 	{
 		myCell.innerHTML = "<img src=./img/nave.png class='img-responsive'>";
 	}
+	else if (str.indexOf("crossIsola") != -1 )
+	{
+		myCell.innerHTML = "<img src=./img/island.png class='img-responsive'>";
+	}
+	else if (str.indexOf("Island") != -1 )
+	{
+		myCell.innerHTML = "<img src=./img/crossIsola.png class='img-responsive'>";
+	}
 
 	else
 
