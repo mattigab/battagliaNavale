@@ -40,15 +40,18 @@ function shoot(r,c)
 {
 	//var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 	var myCell = document.getElementById("R"+r.toString()+"C"+c.toString());
+	var cannone = document.getElementById("cannone");
 
 	var str = myCell.getElementsByTagName("img")[0].src; 
 	if (str.indexOf("nave") != -1 )
 	{
 		myCell.innerHTML = "<img src=./img/crossShip.png class='img-responsive'>";
+		cannone.play();
 	}
 	else if (str.indexOf("natante") != -1 )
 	{
 		myCell.innerHTML = "<img src=./img/crossBoat.png class='img-responsive'>";
+		cannone.play();
 	}
 	else if (str.indexOf("crossBoat") != -1 )
 	{
@@ -65,6 +68,7 @@ function shoot(r,c)
 	else if (str.indexOf("island") != -1 )
 	{
 		myCell.innerHTML = "<img src=./img/crossIsola.png class='img-responsive'>";
+		cannone.play();
 	}
 
 	else
@@ -87,6 +91,7 @@ function shoot(r,c)
 	else
 	{
 		myCell.innerHTML = "<img src=./img/water.png class='img-responsive'>";
+		water.play();
 	}
 
 }
