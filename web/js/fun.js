@@ -40,7 +40,8 @@ function shoot(r,c)
 {
 	//var ids= ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 	var myCell = document.getElementById("R"+r.toString()+"C"+c.toString());
-	var cannone = document.getElementById("cannone");
+	//var cannone = document.getElementById("cannone");
+
 
 	var str = myCell.getElementsByTagName("img")[0].src; 
 	if (str.indexOf("nave") != -1 )
@@ -68,7 +69,7 @@ function shoot(r,c)
 	else if (str.indexOf("island") != -1 )
 	{
 		myCell.innerHTML = "<img src=./img/crossIsola.png class='img-responsive'>";
-		cannone.play();
+		trumpet.play();
 	}
 
 	else
@@ -79,14 +80,18 @@ function shoot(r,c)
 	{
 
 		myCell.innerHTML = "<img src=./img/nave.png class='img-responsive'>";
+		bell.play();
 	}
 	else if(map[r][c] == "natante")
 	{
 		myCell.innerHTML = "<img src=./img/natante.png class='img-responsive'>";
+		wha.play();
+
 	}
 	else if(map[r][c] == "isola")
 	{
 		myCell.innerHTML = "<img src=./img/island.png class='img-responsive'>";
+		seagull.play();
 	}
 	else
 	{
