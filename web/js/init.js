@@ -2,23 +2,24 @@ function load()
 {
 	var myTabDiv = document.getElementById("myTab");
 	var tabHTML = "<table class='myTab'>";
-	var ids= ["0","a","b","c","d","e","f","g","h","i","l","m","n","o","p","q"];
+	var ids = ["","A","B","C","D","E","F","G","H","I","L"];
+	//,"m","n","o","p","q"];
 
-	for (var r = 0; r<16;r++)
+	for (var r = 0; r<11;r++)
 	{	
 
 		tabHTML=tabHTML+"<tr>";
-		for (var c = 0; c<16; c++)
+		for (var c = 0; c<11; c++)
 		{	
 			if(c==0)
 			{
-				tabHTML = tabHTML+"<td>"+ids[r].toString();+"</td>";
+				tabHTML = tabHTML+"<td><h3>"+ids[r].toString();+"</h3></td>";
 			}
 			else
 			{
 				if(r==0)
 				{
-					tabHTML = tabHTML+"<td>"+c.toString();+"</td>";
+					tabHTML = tabHTML+"<td><h3>"+c.toString();+"</h3></td>";
 				}
 				else
 				{

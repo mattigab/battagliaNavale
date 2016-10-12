@@ -2,7 +2,7 @@
  * Created by mattiagabbrielli on 17/11/15.
  */
 
-var N = 16;
+var N = 11;
 var map =new Array(N);
 
 for(var i=1; i<N; i++){
