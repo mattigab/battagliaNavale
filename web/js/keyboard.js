@@ -1,26 +1,36 @@
-// To bind button combos, use '+' to request as many keys as you want.
-// This way, all the keys have to be pressed at once.
-Mousetrap.bind('ctrl+n', function(){ console.log('new'); showBalloon('Ctrl + N'); return false; });
-// Returning false works just like e.preventDefault() and stops the usual functionality of the hotkeys.
-//Mousetrap.bind('ctrl+z', function(){ console.log('undo'); showBalloon('Ctrl + Z'); return false; });
-//Mousetrap.bind('ctrl+shift+z', function(){ console.log('redo'); showBalloon('Ctrl + Shift + Z'); return false; });
+var SEQ = false;
+var r = 0;
+var c = 0;
 
-// The code below is for our demo.
-// Displays a balloon with info on every successful button press. 
-var balloon = $('.keyboard-answer'),
-    stopTimeout;
+document.addEventListener('keydown', function(event) {
+	
+	var character = event.keyCode;
+	var y = String.fromCharCode(character);
 
-$(document).click(function(){
-  if(balloon.is(':visible')) {
-    balloon.removeClass('active');
-  }
-});
+    if (character >= 65 & character<=73) {        
+        SEQ = true;
+        r = character - 64;
+    }
+    else if (character == 76) {
+        SEQ = true;
+        r = character - 66;
+    }
+    else if (character >= 49 & character <=57 & SEQ == true){
+        c = character - 48; 
+    	SEQ = false;
+		shoot(r, c);
+    }
+    else if (character == 48 & SEQ == true) {
+     
+        c = character - 38;
+        SEQ = false;
+        shoot(r, c);    
+    }
+    else {
+    	SEQ = false;
+   		r = 0;
+   		c = 0;
+    }
+    
 
-function showBalloon(data) {
-  balloon.addClass('active').find('h3 span').text(data);
-
-  clearTimeout(stopTimeout);
-  stopTimeout = setTimeout(function () {
-    balloon.removeClass('active');
-  }, 1500);
-}
+}, true);
