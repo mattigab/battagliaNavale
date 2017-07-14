@@ -39,7 +39,7 @@ function load()
 function fill(r,c)
 {
 	var myCell = document.getElementById("R"+r.toString()+"C"+c.toString());
-	var numCell = r*c
+	var numCell = ((r - 1)*6) + c
 	var str = myCell.getElementsByTagName("img")[0].src; 
 	if (str.indexOf("base") != -1 )
 	{
